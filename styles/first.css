@@ -43,5 +43,6 @@ span {background-color: beige; color: brown;} /* inline */
 footer {background-color: antiquewhite;}
 footer > address {color: blue;}
 footer > .copy {color:red;}
+footer > p {color: blueviolet;}
 footer > p > span {color: black;}
 footer > p > em {background-color: yellowgreen; color: yellow;}
