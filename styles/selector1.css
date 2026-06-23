@@ -1,0 +1,46 @@
+/* 선택자 {속성:값;} */
+main > h1 {
+    background-color:#f5f5f5; /* 배경색 */
+    color:#555;
+    /* font-family: '궁서' */
+    font-family: 'pretendard','마루 부리', '궁서';
+    /* 글꼴명이 공백 또는 한글일 땐 따옴표 묶기 */
+    /* 글꼴명 2개 이상 작성하기(대표글꼴, 후보글꼴) */
+    /* 맑은고딕, 궁성, 바탕, 굴림 등 컴퓨터 기본글꼴 외 설치 글꼴들은 웹주소로 따로 연결 */
+}
+main > p {
+    background-color:#f5f5f5;
+    color:#555;
+    font-family: 'pretendard', '마루 부리';
+}
+
+/* .news */
+main > .news {
+    background-color:#eee;
+}
+main > .news > li {
+    color:#0cf;
+    font-size:1em; /* 웹 기본 크기는 16px */
+}
+main > .news > .news_list {
+    font-size:1.5em;
+}
+
+/* div */
+main > #blog {
+    background-color: #f5f5f5;
+}
+main > #blog > h2 {
+    font-size:1em;
+}
+main > #blog > p {
+    background-color:yellow;
+    font-size:1.5em;
+}
+
+/* 형제선택자 */
+main > #blog > h2+p {
+    font-size:0.625em; /* 10px=0.625 */
+}
+
+/* font 사이즈 단위 */
