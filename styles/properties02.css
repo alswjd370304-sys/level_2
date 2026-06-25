@@ -1,0 +1,44 @@
+/* propertises02.css */
+.movie {
+    width: 500px;
+    height: max-content;
+    background-color: #2A2626;
+    border-radius: 10px;
+    padding:30px 20px;
+}
+
+.movie > h1 {
+    font-family: 'pretnedard', '맑은 고딕';
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.movie > .poster {margin: 0 0 20px 0;}
+.movie > .poster > img {}
+
+.movie > .contents {}
+.movie > .contents > .title {
+    font-family: 'pretnedard', '맑은 고딕';
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+.movie > .contents > .contents1 {    
+    font-family: 'pretnedard', '맑은 고딕';
+    font-size: 1.125em;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.movie > .contents > .contents2 {    
+    font-family: 'pretnedard', '맑은 고딕';
+    font-size: 1.125em;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #fff;
+}
