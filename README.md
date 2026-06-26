@@ -22,9 +22,38 @@
 * `div > a~del {}` 해석) 부모div의 자식 a의 형제 del 선택
 * `+`는 바로 옆에 있는 형제태그만 인식한다
 * `~`은 바로 옆 형제 포함 그 뒤에 있는 모든 형제태그들을 인식한다
-
 # 자주쓰는 웹 글꼴 주소
 ## Noto Sans KR
 * <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 ## pretendard
 * <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+# CSS 속성과 값, 활용 방법
+## background
+* `background-color`:배경색상, 실제 배경색이 없어도 영역구분용으로 사용
+* `background-img:url()`: 배경이미지, url() 안에는 상대경로 작성하기
+* `background-repeat`: 배경이미지반복설정, 배경이미지가 **작은 경우**에만 체크
+* `background-size`: 배경이미지크기설정, 배경이미지가 들어간 요소보다 이미지가 작거나 클경우
+* `background-position`: 배경이미지위치설정, **size와 함꼐 무조건 사용하기, x,y순서로 작성**
+* `background-attachment`: 배경이미지스크롤속성, 스크롤 이동 시 이미지 고정시키고 싶을 때만 사용
+* (위) 작성시 주의사항, 배경이미지는 일반 이미지태그과 다르게 요소의 크기가 자동으로 연장되지 않으므로 **반드시 width, hright 크기를 함꼐 작성!**
+## font
+* `font-famliy`: 글꼴설정, 2개 이상 글꼴 작성하기
+* `font-size`: 글자크기, px->em으로 전환해서 작성
+* `font-weight`: 글자굵기, 보통(400) +-100설정
+* `letter-spacing`:자간, -2% -> -0.02em
+* `line-height`: 행간, 100% 0-> 1, 150%->1.5
+* `color`: 글자색상
+## box
+* `border`: **두께, 모양 색상** 순서로 작성 예) 1px solid #000;
+* `padding`: 피그마의 오토레이아웃 패딩과 동일, **부모와 자식 사이의 안쪽여백**
+* `margin`: 피그마의 오토레이아웃 간격과 동일, **형제와 형제 사이의 바깥쪽 여백**
+* `width`: 가로크기(px, %, vW)
+    * 피그마 w 내용에 맞추기 설정 예시) width: max-content;
+    * 피그마 w 채우기 설정 시 예시) width:100%
+    * 피그마 w 고정값 설정예시) width: 500px (직접)
+* `height`: 세로크기 (width와 설명 같음)
+* `border-radius`: 모서리 둥글기(피그마의 모서리 반경이랑 같음), px단위
+## layout
+### 수평, 수직 정렬하기
+* `text-align`: 수평정렬(left, conter, rigint, justify)
+* `line-height`:  글자가 한 줄이고 높이가 고정일 때 높이값 px를 넣어 수직 중앙정렬설정
