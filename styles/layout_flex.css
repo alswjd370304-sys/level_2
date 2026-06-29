@@ -1,0 +1,53 @@
+/* layout_flex.css */
+.box {
+    width: 300px; height: 400px;
+}
+.box > h1 {}
+.box > p {}
+.box > * {
+    border-width: 1px;
+    border-style: solid;
+    width: 100px; height: 100px;
+} /* cls (.) 박스의 모든(*) 자식들 */
+
+
+/* =================================개별클래스 */
+/* box1 */
+.box1 {
+    background-color: pink;
+    /* 자식(item)을 정렬하고 싶을 땐 부모(container)에게 명령 */
+    display: flex;
+    /* flex만 넣었을 때 기본값: 메인축(수평), 줄바꿈불가 */
+    /* 1. 메인축 방향 속성 */
+    /* flex-direction: row 아이템의 메인축을 수평으로 방향맞추기 */
+    /* flex-direction: row-reverse 아이템 메인축 좌우반전*/
+    /* flex-direction: column 수직축 변경*/
+    /* flex-direction: column-reverse 수직축 상하반전*/
+    /* flex-direction: row-reverse; */
+    /* 2. 줄바꿈 속성(기본값:nowrap) */
+    /* nowrap일 때 px로 고정값 설정한 대상이 가동으로 가변형(%)될 수 있음 */
+    /* flex-wrap: wrap;  */
+    /* 3. 메인축방향속성+줄바꿈속성 묶음 속성 */
+    flex-flow: row nowrap;
+    /* 4. 메인축 정렬 속성(수평 수직)에 남은 공간에 맞춘 정렬속성 */
+    /* 기본값 justify-content: flex-start; */
+    justify-content: flex-end; /* space-between 피그마 내에서 간격 자동으로 했을 경우임 */
+    /* 5. 교차축(수평,수직)에 남은 공간에 맞춘 2줄 이상 정렬 속성 */
+    /* align-content: space-around; */
+    /* 6. 교차축(수평,수직)에 남은 공간에 맞춘 1줄 정렬 속성 */
+    align-items: center;
+    /* ailgn-items ailgn-contents은 flex의 줄바꿈 속성에 따라 둘 중 1개만 작성한다. nowrap일땐 ailgn-items, wrap는ailgn-contents   */
+}
+.box1 > h1 {border-color: skyblue;}
+.box1 > p {border-color: white;}
+
+/* box2 */
+.box2 {
+    background-color:skyblue;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+.box2 > h1 {border-color: white;}
+.box2 > p {border-color: pink;}
