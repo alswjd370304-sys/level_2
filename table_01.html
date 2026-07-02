@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>표 디자인-1</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/table_01.css">
+</head>
+<body>
+    <h1>1행 1열 표</h1>
+    <table id="t1">
+        <tr>
+            <td>1행 1열위치</td>
+        </tr>
+    </table>
+    <h1>1행 2열</h1>
+    <table id="t2">
+        <tr>
+            <td>1행1열 위치</td>
+            <td>2행2열 위치</td>
+        </tr>
+    </table>
+    <h1>2행 3열 표</h1>
+    <table id="t3">
+        <tr> <!-- tr은 td 묶기 위한 부모로써만 사용, (내용 작성 X) -->
+            <th>1행1열위치(제목)</th>
+            <td>1행2열위치</td>
+            <td>1행3열위치</td>
+        </tr>
+        <tr>
+            <td>2행1열위치</td>
+            <td>2행2열위치</td>
+            <td>2행3열위치</td>
+        </tr>
+    </table>
+    <h1>도서재고표</h1>
+    <table id="book_stock">
+        <tr>
+            <th>제목</th>
+            <th>종류</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td>사망플래그</td>
+            <td>도서</td>
+            <td>50,000</td>
+            <td>300</td>
+            <td>재고없음</td>
+        </tr>
+        <tr>
+            <td>사망플래그</td>
+            <td>도서</td>
+            <td>50,000</td>
+            <td>300</td>
+            <td>재고없음</td>
+        </tr>
+        <tr>
+            <td>사망플래그</td>
+            <td>도서</td>
+            <td>50,000</td>
+            <td>300</td>
+            <td>재고없음</td>
+        </tr>
+        <tr>
+            <td>사망플래그</td>
+            <td>도서</td>
+            <td>50,000</td>
+            <td>300</td>
+            <td>재고없음</td>
+        </tr>
+        <tr>
+            <td>사망플래그</td>
+            <td>도서</td>
+            <td>50,000</td>
+            <td>300</td>
+            <td>재고없음</td>
+        </tr>
+    </table>
+    <!-- 지역 별 매출 현황 -->
+    <section class="area_wrap">
+        <div class="sale_title">
+            <h2>2024년 지역별 매출 현황</h2>
+            <p>(단위:천원)</p>
+        </div>
+        <table id="sale_status">
+            <tr>
+                <th>지역</th>
+                <th>1분기</th>
+                <th>2분기</th>
+                <th>3분기</th>
+                <th>4분기</th>
+            </tr>
+            <tr>
+                <td>서울<br>특별시</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>1,800</td>
+                <td>2,300</td>
+                <td>2,600</td>
+                <td>4,300</td>
+            </tr>
+        </table>
+        <p class="src">출처:행정안정부</p>
+    </section>
+    <h1>행&열 합치기 4행4열 표</h1>
+    <table id="t4">
+        <tr>
+            <!-- 합쳐지는 시작 태그에 속성작성 -->
+            <th colspan="2">1</th>
+            <!-- 시작 태그를 제외한 나머지 태그는 삭제or주석 -->
+            <!-- <th>2</th> -->
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td rowspan="3">5</td>
+            <td>6</td>
+            <td colspan="2">7</td>
+            <!-- <td>8</td> -->
+        </tr>
+        <tr>
+            <!-- <td>9</td> -->
+            <td>10</td>
+            <td>11</td>
+            <td rowspan="2">12</td>
+        </tr>
+        <tr>
+            <!-- <td>13</td> -->
+            <td>14</td>
+            <td>15</td>
+            <!-- <td>16</td> -->
+        </tr>
+    </table>
+    <!-- 선불요금제 -->
+    <h1>선불요금제</h1>
+    <table id="pay">
+        <tr>
+            <th rowspan="2"><img src="./images/phone.png" alt=""></th>
+            <td colspan="4">
+                <h2>선불 요금제(국제전화)</h2>
+                <p>합리적인 선불요금제에 국제전화 혜택을 더한 알뜰한 요금제!</p>
+            </td>
+            <!-- <th>3</th>
+            <th>4</th>
+            <th>5</th> -->
+        </tr>
+        <tr>
+            <!-- <th>6</th> -->
+            <th>기본요금<br><span>(부가세포함금액)</span></th>
+            <th>음성</th>
+            <th>문자</th>
+            <th>데이터</th>
+        </tr>
+        <tr>
+            <td>국제선불 300M</td>
+            <td><em>40,700</em>원</td>
+            <td>집/이동전화 무제한(국제전화매일 20분)</td>
+            <td>기본제공</td>
+            <td>300MB</td>
+        </tr>
+        <tr>
+            <td>국제선불 300M</td>
+            <td><em>40,700</em>원</td>
+            <td>집/이동전화 무제한(국제전화매일 20분)</td>
+            <td>기본제공</td>
+            <td>300MB</td>
+        </tr>
+        <tr>
+            <td>국제선불 300M</td>
+            <td><em>40,700</em>원</td>
+            <td>집/이동전화 무제한(국제전화매일 20분)</td>
+            <td>기본제공</td>
+            <td>300MB</td>
+        </tr>
+    </table>
+</body>
+</html>
